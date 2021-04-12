@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SobreFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/sobreDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Sobre o Desenvolvedor"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nomeAutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tarcisio Dantas Câmara"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/sobreDev"
+            app:layout_constraintStart_toStartOf="@+id/sobreDev"
+            app:layout_constraintTop_toBottomOf="@+id/sobreDev" />
+
+        <TextView
+            android:id="@+id/linkLinkedin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="https://www.linkedin.com/in/tarcisio-dantas/"
+            android:textColor="#0C41E1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/nomeAutor"
+            app:layout_constraintStart_toStartOf="@+id/nomeAutor"
+            app:layout_constraintTop_toBottomOf="@+id/nomeAutor" />
+
+        <Button
+            android:id="@+id/btnLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Acessar Linkedin"
+            app:backgroundTint="#093AED"
+            app:layout_constraintEnd_toEndOf="@+id/linkLinkedin"
+            app:layout_constraintStart_toStartOf="@+id/linkLinkedin"
+            app:layout_constraintTop_toBottomOf="@+id/linkLinkedin" />
+
+        <TextView
+            android:id="@+id/linkGit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="https://github.com/tattudc/"
+            android:textColor="#0C41E1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/linkLinkedin"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="@+id/linkLinkedin"
+            app:layout_constraintTop_toBottomOf="@+id/btnLink" />
+
+        <Button
+            android:id="@+id/btnGit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Acessar Github"
+            app:backgroundTint="#093AED"
+            app:layout_constraintEnd_toEndOf="@+id/linkGit"
+            app:layout_constraintStart_toStartOf="@+id/linkGit"
+            app:layout_constraintTop_toBottomOf="@+id/linkGit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
