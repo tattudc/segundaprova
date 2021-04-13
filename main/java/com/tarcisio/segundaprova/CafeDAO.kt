@@ -1,5 +1,6 @@
 package com.tarcisio.segundaprova
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
@@ -15,7 +16,7 @@ interface CafeDAO {
     fun atualizar(cafe:Cafe):Int
 
     @Query("SELECT * FROM tabela_cafe")
-    fun listAll():List<Cafe>
+    fun listAll():LiveData<List<Cafe>>
 
     @Query("SELECT * FROM tabela_cafe WHERE id= :id")
     fun findById(id:Long):Cafe

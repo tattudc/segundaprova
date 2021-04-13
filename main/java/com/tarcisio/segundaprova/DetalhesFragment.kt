@@ -19,8 +19,8 @@ class DetalhesFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detalhes, container, false);
         detalhesFragmentViewModel = ViewModelProvider(this).get(DetalhesFragmentViewModel::class.java);
 
-        //val args by navArgs();
-        //detalhesFragmentViewModel.setDados(args.id);
+        val args:DetalhesFragmentArgs by navArgs();
+        detalhesFragmentViewModel.setDados(args.id);
 
         binding.apply{
             textNome.text = detalhesFragmentViewModel.nome;
@@ -42,13 +42,13 @@ class DetalhesFragment : Fragment() {
 
     }
 
-    /*override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.optionsmenus, menu)
+        inflater.inflate(R.menu.opitionsmenu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, this.findNavController()) || super.onOptionsItemSelected(item)
-    }*/
+    }
 
 }

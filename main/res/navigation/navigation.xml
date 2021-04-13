@@ -8,36 +8,65 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.tarcisio.segundaprova.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Lista de Café"
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_cadastraFragment2"
-            app:destination="@id/cadastraFragment2" />
-        <action
-            android:id="@+id/action_homeFragment_to_sobreFragment2"
-            app:destination="@id/sobreFragment2" />
+            android:id="@+id/action_homeFragment_to_cadastraFragment"
+            app:destination="@id/cadastraFragment" />
         <action
             android:id="@+id/action_homeFragment_to_alteraFragment"
             app:destination="@id/alteraFragment" />
         <action
             android:id="@+id/action_homeFragment_to_detalhesFragment"
             app:destination="@id/detalhesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sobreFragment"
+            app:destination="@id/sobreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/cadastraFragment2"
+        android:id="@+id/cadastraFragment"
         android:name="com.tarcisio.segundaprova.CadastraFragment"
-        android:label="CadastraFragment" />
-    <fragment
-        android:id="@+id/sobreFragment2"
-        android:name="com.tarcisio.segundaprova.SobreFragment"
-        android:label="fragment_sobre"
-        tools:layout="@layout/fragment_sobre" />
+        android:label="Cadastrar"
+        tools:layout="@layout/fragment_cadastra">
+        <action
+            android:id="@+id/action_cadastraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/alteraFragment"
         android:name="com.tarcisio.segundaprova.AlteraFragment"
-        android:label="AlteraFragment" />
+        android:label="Alterar"
+        tools:layout="@layout/fragment_altera">
+        <action
+            android:id="@+id/action_alteraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/detalhesFragment"
         android:name="com.tarcisio.segundaprova.DetalhesFragment"
-        android:label="DetalhesFragment" />
+        android:label="Detalhes do personagem"
+        tools:layout="@layout/fragment_detalhes">
+        <action
+            android:id="@+id/action_detalhesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/sobreFragment"
+        android:name="com.tarcisio.segundaprova.SobreFragment"
+        android:label="Sobre o App"
+        tools:layout="@layout/fragment_sobre">
+        <action
+            android:id="@+id/action_sobreFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/DialogFragment"
+        android:name="com.tarcisio.segundaprova.DialogFragment"
+        android:label="DialogFragment" />
 </navigation>

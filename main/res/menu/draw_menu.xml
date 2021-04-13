@@ -5,10 +5,10 @@
     android:layout_width="match_parent">
 
     <item
-        android:id="@+id/cadastraFragment"
+        android:id="@+id/CadastraFragment"
         android:title="Cadastrar" />
 
     <item
-        android:id="@+id/sobreFragment"
+        android:id="@+id/SobreFragment"
         android:title="Sobre" />
 </menu>

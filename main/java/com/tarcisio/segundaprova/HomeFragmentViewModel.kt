@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.Room
 
 class HomeFragmentViewModel(application: Application): AndroidViewModel(application) {
-    var cafe: List<Cafe>?= null;
+    var cafe:LiveData<List<Cafe>>?= null;
 
     init {
         val db: AppDatabase by lazy {

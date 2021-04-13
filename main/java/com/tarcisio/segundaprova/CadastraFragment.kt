@@ -38,7 +38,7 @@ class CadastraFragment : Fragment() {
             cadastraFragmentViewModel.preco =  binding.textPrecoCafe.text.toString().toFloat();
             cadastraFragmentViewModel.grao = binding.textEditGrao.text.toString();
             cadastraFragmentViewModel.cadastraDados(Cafe(cadastraFragmentViewModel.nome, cadastraFragmentViewModel.pais, cadastraFragmentViewModel.sabor, cadastraFragmentViewModel.preco, cadastraFragmentViewModel.grao, cadastraFragmentViewModel.brasilProduz));
-            //Navigation.findNavController(it).navigate(CadastraFragmentDirections.actionCadastraFragmentToHomeFragment());
+            Navigation.findNavController(it).navigate(CadastraFragmentDirections.actionCadastraFragmentToHomeFragment());
         }
 
         setHasOptionsMenu(true);
@@ -47,12 +47,12 @@ class CadastraFragment : Fragment() {
 
      }
 
-    //override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-      //  super.onCreateOptionsMenu(menu, inflater)
-        //inflater.inflate(R.menu.cadastramenu, menu)
-    //}
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.cadastramenu, menu)
+    }
 
-    //override fun onOptionsItemSelected(item: MenuItem): Boolean {
-      //  return NavigationUI.onNavDestinationSelected(item, this.findNavController()) || super.onOptionsItemSelected(item)
-    //}
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, this.findNavController()) || super.onOptionsItemSelected(item)
+    }
 }
